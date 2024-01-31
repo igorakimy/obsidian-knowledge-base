@@ -4,15 +4,19 @@
     "type": "split",
     "children": [
       {
-        "id": "be8c2f6ef530044c",
+        "id": "228b2564b7839c56",
         "type": "tabs",
         "children": [
           {
-            "id": "12f6dfa55022616d",
+            "id": "e37c53309eec9cd7",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "Администрирование/Операционные системы/Windows/Активация Windows 10(11).md",
+                "mode": "preview",
+                "source": true
+              }
             }
           }
         ]
@@ -61,7 +65,8 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -81,6 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Администрирование/Операционные системы/Windows/Активация Windows 10(11).md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -97,6 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "Администрирование/Операционные системы/Windows/Активация Windows 10(11).md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -118,7 +125,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "Администрирование/Операционные системы/Windows/Активация Windows 10(11).md"
+              }
             }
           }
         ]
@@ -138,6 +147,9 @@
       "command-palette:Открыть палитру команд": false
     }
   },
-  "active": "12f6dfa55022616d",
-  "lastOpenFiles": []
+  "active": "33d27094dabceb75",
+  "lastOpenFiles": [
+    "Администрирование/Операционные системы/Windows/Активация Windows 10(11).md",
+    "README.md"
+  ]
 }
