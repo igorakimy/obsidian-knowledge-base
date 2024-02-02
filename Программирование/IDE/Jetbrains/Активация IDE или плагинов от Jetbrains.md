@@ -14,11 +14,11 @@ tags:
 
 Перейдите по следующей [ссылке](https://3.jetbra.in/) и выберите любое доступное зеркало, откуда можно скачать архив. 
 
-![jetbra cloud](_media/images/jetbra-clouds.png)
+![jetbra cloud](/_media/images/jetbra-clouds.png)
 
 Скачайте архив **jetbra.zip** и распакуйте его в любую папку(желательно в ту, в которую установили IDE).
 
-![jetbra cloud](_media/images/jetbra-zip.png)
+![jetbra zip](/_media/images/jetbra-zip.png)
 
 ### 3. Откройте папку "jetbra" и запустите кряк.
 
@@ -33,13 +33,13 @@ tags:
 Вернитесь на сайт, откуда скачали архив с кряком. 
 Найдите в списке ниже IDE, которую хотите активировать и скопируйте ключ, наведя курсор мыши на область со звездочками и кликнув по ней.
 
-![jetbra cloud](_media/images/jetbra-activation-code.png)
+![jetbra activation code](/_media/images/jetbra-activation-code.png)
 
 Запустите вашу IDE.
 Выберите способ активации **Activation code** и вставьте скопированный ранее ключ.
 Нажмите кнопку **Activate**.
 
-![jetbra cloud](_media/images/ide-license-key.png)
+![ide license key](/_media/images/ide-license-key.png)
 
 Теперь вы успешно активировали вашу IDE. 
 
