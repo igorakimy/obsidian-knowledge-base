@@ -132,7 +132,7 @@ archinstall
 
 **Additional packages**
 
-В качестве дополнительных пакетов необходимо установить следующие: `git firefox hyprpaper hyprlock waybar fastfetch nvidia-utils lib32-nvidia-utils nvidia-settings opencl-nvidia xorg-server-devel`.
+В качестве дополнительных пакетов *необходимо* установить следующие: `git firefox hyprpaper hyprlock waybar fastfetch nvidia-utils egl-wayland lib32-nvidia-utils nvidia-settings opencl-nvidia xorg-server-devel`.
 
 ###### Конфигурация сети (Network configuration)
 
@@ -368,4 +368,52 @@ yay -S hyprshot
 После установки необходимо добавить бинд для создания скринов:
 ```bash
 bind =, PRINT, exec, hyprshot -m region
+```
+
+###### Настройка NVIDIA
+
+Чтобы включить режим ядра DRM, необходимо добавить модули драйвера NVIDIA в initramfs. Для этого необходимо открыть файл `/etc/mkinitcpio.conf` и в массиве `MODULES` добавить следующее:
+```bash
+MODULES=(... nvidia nvidia_modeset nvidia_uvm nvidia_drm ...)
+```
+
+Затем необходимо создать/отредактировать файл `/etc/modprobe.d/nvidia.conf` и добавить в него следующую строку:
+```bash
+options nvidia_drm modeset=1 fbdev=1
+```
+
+ После этого нужно пересобрать initramfs c помощью следующей команды: 
+```bash
+sudo mkinitcpio -P 
+```
+Перезагрузите компьютер.
+
+Добавить следующие переменные среды в файл конфигурации Hyprland `~/.config/hypr/hyprland.conf`:
+```bash
+env = LIBVA_DRIVER_NAME,nvidia
+env = XDG_SESSION_TYPE,wayland
+env = GBM_BACKEND,nvidia-drm
+env = __GLX_VENDOR_LIBRARY_NAME,nvidia
+
+cursor {
+    no_hardware_cursors = true
+}
+```
+
+Чтобы работало аппаратное ускорение видео, необходимо установить следующий пакет:
+```bash
+sudo pacman -S libva-nvidia-driver
+```
+ Также необходимо добавить переменную среды в файл конфигурации Hyprland `~/.config/hypr/hyprland.conf`:
+```bash
+env = NVD_BACKEND,direct
+```
+
+Чтобы избавиться от мерцания в большинстве приложений Electron, необходимо добавить следующую переменную среды в файл конфигурации Hyprland `~/.config/hypr/hyprland.conf`:
+```bash
+env = ELECTRON_OZONE_PLATFORM_HINT,auto
+```
+Некоторым же другим приложениям на Electron/CEF потребуется явно указать следующие флаги при запуске:
+```bash
+--enable-features=UseOzonePlatform --ozone-platform=wayland
 ```
